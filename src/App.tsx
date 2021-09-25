@@ -4,22 +4,27 @@ import Apply from './pages/Apply/Apply'
 import Home from './pages/Home/Home'
 import './fonts/fonts.css'
 import { createBrowserHistory } from 'history'
-import './app.css'
+import './styles/app.css'
+import './styles/transitions.css'
+import Header from './components/Header'
+import { ThemeProvider } from 'styled-components'
+import theme from './styles/theme'
 
 function App() {
   const history = createBrowserHistory()
 
   return (
-    <div>
-      <Suspense fallback={<div />}>
-        <Router history={history}>
+    <Router history={history}>
+      <ThemeProvider theme={theme}>
+        <Suspense fallback={<div />}>
+          <Header />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/apply' component={Apply} />
           </Switch>
-        </Router>
-      </Suspense>
-    </div>
+        </Suspense>
+      </ThemeProvider>
+    </Router>
   )
 }
 
