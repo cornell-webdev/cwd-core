@@ -66,12 +66,10 @@ export interface IChildProps {
 }
 
 const Child = styled.div<IChildProps>`
-  transition: ${(props) =>
-    `opacity ${props.transitionDuration}ms, transform ${props.transitionDuration}ms`};
-  -webkit-transition: ${(props) =>
-    `opacity ${props.transitionDuration}ms, transform ${props.transitionDuration}ms`};
-  -webkit-transition: ${(props) =>
-    `-webkit-opacity ${props.transitionDuration}ms, -webkit-transform ${props.transitionDuration}ms`};
+  transition: ${(props) => `all ${props.transitionDuration}ms`};
+  -webkit-transition: ${(props) => `all ${props.transitionDuration}ms`};
+  -webkit-transition: ${(props) => `-webkit-opacity ${props.transitionDuration}ms`};
+  -webkit-transition: ${(props) => `-webkit-transform ${props.transitionDuration}ms`};
   transform: ${(props) => (props.maxIsVisible > props.i ? 'none' : 'translateY(20px)')};
   -webkit-transform: ${(props) => (props.maxIsVisible > props.i ? 'none' : 'translateY(20px)')};
   opacity: ${(props) => (props.maxIsVisible > props.i ? 1 : 0)};
