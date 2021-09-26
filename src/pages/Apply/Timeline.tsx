@@ -12,7 +12,11 @@ const Timeline = () => {
 
   return (
     <Container>
-      {isDesktop && <StyledIllustTimeline />}
+      {isDesktop && (
+        <FadeOnView>
+          <StyledIllustTimeline />
+        </FadeOnView>
+      )}
       <InnerContainer>
         <LineContainer>
           <VertLine height={30} />
