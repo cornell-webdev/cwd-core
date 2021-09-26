@@ -22,7 +22,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   border-bottom: 1px solid ${(props) => props.theme.border.default};
 `
 
