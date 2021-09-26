@@ -10,6 +10,7 @@ import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
 import { ReactComponent as Illust2 } from 'src/assets/illust-2.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
+import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
 import { ReactComponent as IllustApply } from 'src/assets/illust-apply.svg'
 import ContainedButton from 'src/components/ContainedButton'
 import useIsDesktop from 'src/hooks/useIsDesktop'
@@ -61,7 +62,7 @@ const Home = () => {
         </FlexRow>
       </Section>
       <ProjectShowcase
-        overline='Project 01'
+        overline='Subteam 01'
         name='Cornlet'
         p1='Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.'
         p2="We're looking to expand into the housing market in general. New features will includeyear-lease listings, landlord reviews, and more!"
@@ -69,7 +70,7 @@ const Home = () => {
         svg={<Illust1 />}
       />
       <ProjectShowcase
-        overline='Project 02'
+        overline='Subteam 02'
         name='Coursable'
         p1="Coursable is a course planning platform for Cornell students. It's still a work in progress!"
         p2="It's going to be an open source course planning platform, which means you will be able
@@ -78,12 +79,20 @@ const Home = () => {
         svg={<Illust2 />}
       />
       <ProjectShowcase
-        overline='Project 03'
+        overline='Subteam 03'
         name='Glue'
         p1='Glue is a centralized design system and React component library for Cornell WebDev.'
         p2='Building a comprehensive design system is hard work! But your work on Glue will impact
         all the projects within Cornell WebDev. Talk about lots of responsibility!'
         svg={<Illust3 />}
+      />
+      <ProjectShowcase
+        overline='Subteam 04'
+        name='Core'
+        p1="Core will be working on this very website. Yep! The one you're looking at right now!"
+        p2='This subteam will be responsible for the face of Cornell WebDev. Because first impressions matter. Remember, we only have 10 seconds!'
+        link='https://github.com/jj534/cornell-webdev-home'
+        svg={<IllustCore />}
       />
       <ProjectShowcase
         overline="It's open!"
