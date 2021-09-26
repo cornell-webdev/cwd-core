@@ -111,8 +111,8 @@ export const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
-  padding: 0 1rem;
+  min-height: 98vh;
+  padding: 3rem 1rem;
 
   & svg {
     height: 80%;
