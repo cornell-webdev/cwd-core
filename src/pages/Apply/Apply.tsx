@@ -19,7 +19,7 @@ const Apply = () => {
       <Showcase
         overline='React'
         name='Frontend Developer'
-        p1='As a frontend developer, you will be developing highly performance React applications!'
+        p1='As a frontend developer, you will be developing highly performant React applications!'
         p2='Some of the things we use are Typescript, styled-components, and react-query.'
         svg={<IllustFrontend />}
         // TODO: add application link

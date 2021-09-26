@@ -64,7 +64,7 @@ const Home = () => {
         overline='Subteam 01'
         name='Cornlet'
         p1='Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.'
-        p2="We're looking to expand into the housing market in general. New features will includeyear-lease listings, landlord reviews, and more!"
+        p2="We're looking to expand into the housing market in general. New features will include year-lease listings, landlord reviews, and more!"
         link='https://www.cornlet.com'
         svg={<Illust1 />}
       />
