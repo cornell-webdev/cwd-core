@@ -9,10 +9,10 @@ import Space from 'src/components/Space'
 import Text from 'src/components/Text'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
-import { InnerDivider, Section } from './Home'
+import { InnerDivider, Section } from '../pages/Home/Home'
 
-export interface IProjectShowcaseProps {
-  overline: string
+export interface IShowcaseProps {
+  overline?: string
   name: string
   p1: string
   p2: string
@@ -21,17 +21,19 @@ export interface IProjectShowcaseProps {
   isApply?: boolean
 }
 
-const ProjectShowcase = ({ overline, name, p1, p2, link, svg, isApply }: IProjectShowcaseProps) => {
+const Showcase = ({ overline, name, p1, p2, link, svg, isApply }: IShowcaseProps) => {
   const isDesktop = useIsDesktop()
 
   return (
     <Section>
       <FlexRow justifySpaceAround alignCenter>
         <FadeOnView>
-          <Text variant='h3'>
-            <MutedColor>{overline}</MutedColor>
-          </Text>
-          <Space padding='.2rem 0' />
+          {overline && (
+            <Text variant='h3'>
+              <MutedColor>{overline}</MutedColor>
+            </Text>
+          )}
+          <Space padding='.1rem 0' />
           <Text variant='h1'>
             <BrandColor>{name}</BrandColor>
           </Text>
@@ -74,4 +76,4 @@ const LeftContainer = styled.div`
   }
 `
 
-export default ProjectShowcase
+export default Showcase

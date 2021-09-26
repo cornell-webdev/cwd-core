@@ -1,22 +1,21 @@
 import React from 'react'
-import FadeOnView from 'src/components/FadeOnView'
-import Fullwidth from 'src/components/Fullwidth'
-import MutedColor from 'src/components/MutedColor'
-import Space from 'src/components/Space'
-import Text from 'src/components/Text'
-import styled from 'styled-components'
-import { FlexRow } from 'src/components/FlexContainer'
+import { Link } from 'react-router-dom'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
 import { ReactComponent as Illust2 } from 'src/assets/illust-2.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
-import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
 import { ReactComponent as IllustApply } from 'src/assets/illust-apply.svg'
-import ContainedButton from 'src/components/ContainedButton'
-import useIsDesktop from 'src/hooks/useIsDesktop'
-import { Link } from 'react-router-dom'
+import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
 import BrandColor from 'src/components/BrandColor'
-import ProjectShowcase from './ProjectShowcase'
+import ContainedButton from 'src/components/ContainedButton'
+import FadeOnView from 'src/components/FadeOnView'
+import { FlexRow } from 'src/components/FlexContainer'
+import MutedColor from 'src/components/MutedColor'
+import Showcase from 'src/components/Showcase'
+import Space from 'src/components/Space'
+import Text from 'src/components/Text'
+import useIsDesktop from 'src/hooks/useIsDesktop'
+import styled from 'styled-components'
 
 const Home = () => {
   const isDesktop = useIsDesktop()
@@ -61,7 +60,7 @@ const Home = () => {
           )}
         </FlexRow>
       </Section>
-      <ProjectShowcase
+      <Showcase
         overline='Subteam 01'
         name='Cornlet'
         p1='Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.'
@@ -69,7 +68,7 @@ const Home = () => {
         link='https://www.cornlet.com'
         svg={<Illust1 />}
       />
-      <ProjectShowcase
+      <Showcase
         overline='Subteam 02'
         name='Coursable'
         p1="Coursable is a course planning platform for Cornell students. It's still a work in progress!"
@@ -78,7 +77,7 @@ const Home = () => {
         link='https://coursable-cornell.herokuapp.com/'
         svg={<Illust2 />}
       />
-      <ProjectShowcase
+      <Showcase
         overline='Subteam 03'
         name='Glue'
         p1='Glue is a centralized design system and React component library for Cornell WebDev.'
@@ -86,7 +85,7 @@ const Home = () => {
         all the projects within Cornell WebDev. Talk about lots of responsibility!'
         svg={<Illust3 />}
       />
-      <ProjectShowcase
+      <Showcase
         overline='Subteam 04'
         name='Core'
         p1="Core will be working on this very website. Yep! The one you're looking at right now!"
@@ -94,7 +93,7 @@ const Home = () => {
         link='https://github.com/jj534/cornell-webdev-home'
         svg={<IllustCore />}
       />
-      <ProjectShowcase
+      <Showcase
         overline="It's open!"
         name='Apply now'
         p1='Applications are open! Head on over and submit your application.'
