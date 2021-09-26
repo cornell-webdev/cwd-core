@@ -105,7 +105,7 @@ export const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 98vh;
   padding: 0 1rem;
 
   & svg {
