@@ -89,7 +89,7 @@ const Home = () => {
         overline='Subteam 04'
         name='Core'
         p1="Core will be working on this very website. Yep! The one you're looking at right now!"
-        p2='This subteam will be responsible for the face of Cornell WebDev. Because first impressions matter. Remember, we only have 10 seconds!'
+        p2='This subteam will be responsible for the face of Cornell WebDev. First impressions matter. Remember, we only have 10 seconds!'
         link='https://github.com/jj534/cornell-webdev-home'
         svg={<IllustCore />}
       />
