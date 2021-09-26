@@ -3,6 +3,7 @@ import styled from 'styled-components'
 interface FlexElementProps {
   justifyStart?: boolean
   justifySpaceBetween?: boolean
+  justifySpaceAround?: boolean
   justifyCenter?: boolean
   justifyEnd?: boolean
   alignStart?: boolean
@@ -22,6 +23,9 @@ const FlexElement = styled.div<FlexElementProps>`
 
   // justifySpaceBetween
   justify-content: ${(props) => props.justifySpaceBetween && 'space-between'};
+
+  // justifySpaceAround
+  justify-content: ${(props) => props.justifySpaceBetween && 'space-around'};
 
   // justifyCenter
   justify-content: ${(props) => props.justifyCenter && 'center'};
@@ -55,5 +59,4 @@ export const FlexColumn = styled(FlexElement)`
   flex-direction: column;
 `
 
-export const FlexRow = styled(FlexElement)`
-`
+export const FlexRow = styled(FlexElement)``
