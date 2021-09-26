@@ -13,9 +13,11 @@ const Timeline = () => {
   return (
     <Container>
       {isDesktop && (
-        <FadeOnView>
-          <StyledIllustTimeline />
-        </FadeOnView>
+        <InnerContainer>
+          <FadeOnView>
+            <StyledIllustTimeline />
+          </FadeOnView>
+        </InnerContainer>
       )}
       <InnerContainer>
         <LineContainer>
@@ -71,8 +73,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > div:first-of-type {
-    margin-right: 1rem;
+  & > div:last-of-type {
+    margin-left: 1rem;
   }
 `
 
@@ -123,7 +125,7 @@ const EventText = styled(Text)`
 `
 
 const StyledIllustTimeline = styled(IllustTimeline)`
-  height: 30%;
+  height: 420px;
   width: 30vw;
   margin-right: 2rem;
 `
