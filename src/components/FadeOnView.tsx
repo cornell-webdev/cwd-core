@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import FadeIn from 'react-fade-in'
+import FadeIn from 'src/components/FadeIn'
 import useOnScreen from 'src/hooks/useOnScreen'
 
 interface IFadeOnViewProps {
