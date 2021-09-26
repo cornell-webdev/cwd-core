@@ -24,7 +24,8 @@ const Apply = () => {
         p1='As a frontend developer, you will be developing highly performant React applications!'
         p2='Some of the things we use are Typescript, styled-components, and react-query.'
         svg={<IllustFrontend />}
-        // TODO: add application link
+        link='https://forms.gle/CDH48gVp6csGyQJA9'
+        buttonText='Apply'
       />
       <Showcase
         overline='Node.js | MongoDB'
@@ -32,7 +33,8 @@ const Apply = () => {
         p1='As a backend developer, you will be developing APIs and designing databases.'
         p2='Some of the things we use are Node.js, Express, and MongoDB.'
         svg={<IllustBackend />}
-        // TODO: add application link
+        link='https://forms.gle/dAXuDMSyuP4mH1MX9'
+        buttonText='Apply'
       />
       <Showcase
         overline='Figma'
@@ -40,7 +42,8 @@ const Apply = () => {
         p1='As a designer, you will be designing low and high fidelity designs in Figma.'
         p2='You could also get a chance to design the Cornell WebDev brand. (Maybe you could design our logo!)'
         svg={<IllustDesign />}
-        // TODO: add application link
+        link='https://forms.gle/HttsvcvhKbsF9Jnv8'
+        buttonText='Apply'
       />
     </Container>
   )

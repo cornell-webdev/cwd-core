@@ -19,9 +19,19 @@ export interface IShowcaseProps {
   link?: string
   svg: React.ReactNode
   isApply?: boolean
+  buttonText?: string
 }
 
-const Showcase = ({ overline, name, p1, p2, link, svg, isApply }: IShowcaseProps) => {
+const Showcase = ({
+  overline,
+  name,
+  p1,
+  p2,
+  link,
+  svg,
+  isApply,
+  buttonText = 'View project',
+}: IShowcaseProps) => {
   const isDesktop = useIsDesktop()
 
   return (
@@ -48,7 +58,7 @@ const Showcase = ({ overline, name, p1, p2, link, svg, isApply }: IShowcaseProps
           <Space padding='1rem 0' />
           {link && !isApply && (
             <a href={link} target='_blank' rel='noopener noreferrer'>
-              <ContainedButton>View project</ContainedButton>
+              <ContainedButton>{buttonText}</ContainedButton>
             </a>
           )}
           {isApply && (
