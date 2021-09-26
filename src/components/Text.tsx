@@ -6,8 +6,12 @@ interface TextProps {
   children: React.ReactNode
 }
 
-const Text = ({ variant = 'p', children }: TextProps) => {
-  return <StyledText variant={variant}>{children}</StyledText>
+const Text = ({ variant = 'p', children, ...rest }: TextProps) => {
+  return (
+    <StyledText variant={variant} {...rest}>
+      {children}
+    </StyledText>
+  )
 }
 
 interface IStyledTextProps {

@@ -32,16 +32,14 @@ const Home = () => {
             <Text variant='h1'>
               Cornell <BrandColor>WebDev</BrandColor>
             </Text>
+            <Space padding='.8rem 0' />
+            <CenteredText variant='p'>Let's redefine what it means</CenteredText>
+            <CenteredText variant='p'>to be a project team, together.</CenteredText>
+            <Space padding='.8rem 0' />
             {isDesktop && (
-              <>
-                <Space padding='.8rem 0' />
-                <Text variant='p'>Let's redefine what it means</Text>
-                <Text variant='p'>to be a project team, together.</Text>
-                <Space padding='.8rem 0' />
-                <Link to='/apply'>
-                  <ContainedButton>Apply</ContainedButton>
-                </Link>
-              </>
+              <Link to='/apply'>
+                <ContainedButton>Apply</ContainedButton>
+              </Link>
             )}
             <Space padding='2rem 0' />
             {!isDesktop && (
@@ -131,6 +129,14 @@ export const Section = styled.div`
 
 export const InnerDivider = styled.div`
   width: 10vw;
+`
+
+const CenteredText = styled(Text)`
+  text-align: center;
+
+  @media (min-width: ${(props) => props.theme.large}) {
+    text-align: left;
+  }
 `
 
 export default Home
