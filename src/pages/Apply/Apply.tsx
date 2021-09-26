@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Showcase from 'src/components/Showcase'
+import Timeline from './Timeline'
 import { ReactComponent as IllustApplyMain } from 'src/assets/illust-apply-main.svg'
 import { ReactComponent as IllustFrontend } from 'src/assets/illust-frontend.svg'
 import { ReactComponent as IllustBackend } from 'src/assets/illust-backend.svg'
@@ -16,6 +17,7 @@ const Apply = () => {
         p2='Afterwards, feel free to apply to the position that fits you best. Good luck!'
         svg={<IllustApplyMain />}
       />
+      <Timeline />
       <Showcase
         overline='React'
         name='Frontend Developer'
