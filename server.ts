@@ -8,8 +8,9 @@ const port = process.env.PORT || 3001
 app.use((req, res, next) => {
   if (!req.secure && process.env.NODE_ENV === 'production') {
     res.redirect(`https://${req.get('host')}${req.url}`)
+  } else {
+    next()
   }
-  next()
 })
 
 app.use(express.static(path.join(__dirname, 'build')))
