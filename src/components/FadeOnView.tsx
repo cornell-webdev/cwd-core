@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import FadeIn from 'src/components/FadeIn'
 import useOnScreen from 'src/hooks/useOnScreen'
+import { isIPhone13, isChrome } from 'react-device-detect'
 
 interface IFadeOnViewProps {
   children: React.ReactNode
@@ -9,6 +10,10 @@ interface IFadeOnViewProps {
 const FadeOnView = ({ children }: IFadeOnViewProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const isViewing = useOnScreen(ref)
+
+  if (isIPhone13 && isChrome) {
+    return <div>{children}</div>
+  }
 
   return (
     <div ref={ref}>
