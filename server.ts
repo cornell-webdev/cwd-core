@@ -7,11 +7,14 @@ const port = process.env.PORT || 3001
 // force https
 app.enable('trust proxy')
 app.use((req, res, next) => {
-  if (!req.secure && process.env.NODE_ENV === 'production') {
-    res.redirect(`https://${req.get('host')}${req.url}`)
-  } else {
-    next()
+  if (
+    !req.secure &&
+    req.get('x-forwarded-proto') !== 'https' &&
+    process.env.NODE_ENV === 'production'
+  ) {
+    return res.redirect(`https://${req.get('host')}${req.url}`)
   }
+  next()
 })
 
 app.use(express.static(path.join(__dirname, 'build')))
