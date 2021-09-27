@@ -9,7 +9,14 @@ app.use(express.static(path.join(__dirname, 'build')))
 // force https
 app.enable('trust proxy')
 app.use((req, res, next) => {
-  req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+  if (
+    !req.secure &&
+    req.get('x-forwarded-proto') !== 'https' &&
+    process.env.NODE_ENV === 'production'
+  ) {
+    return res.redirect(`https://${req.get('host')}${req.url}`)
+  }
+  next()
 })
 
 app.get('*', (req, res) => {
