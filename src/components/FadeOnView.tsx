@@ -12,7 +12,7 @@ const FadeOnView = ({ children }: IFadeOnViewProps) => {
   const isViewing = useOnScreen(ref)
 
   if (isIPhone13 && isChrome) {
-    return <div>{children}</div>
+    return <div ref={ref}>{children}</div>
   }
 
   return (
