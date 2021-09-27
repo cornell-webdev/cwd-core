@@ -29,9 +29,9 @@ const Home = () => {
               <MutedColor>Introducing</MutedColor>
             </Text>
             <Space padding='.1rem 0' />
-            <Text variant='h1'>
+            <LogoText variant='h1'>
               Cornell <BrandColor>WebDev</BrandColor>
-            </Text>
+            </LogoText>
             <Space padding='.8rem 0' />
             <CenteredText variant='p'>Let's redefine what it means</CenteredText>
             <CenteredText variant='p'>to be a project team, together.</CenteredText>
@@ -136,6 +136,14 @@ const CenteredText = styled(Text)`
 
   @media (min-width: ${(props) => props.theme.large}) {
     text-align: left;
+  }
+`
+
+const LogoText = styled(Text)`
+  white-space: nowrap;
+
+  @media (max-width: ${(props) => props.theme.xsmall}) {
+    font-size: 2rem;
   }
 `
 

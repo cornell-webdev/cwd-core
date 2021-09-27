@@ -43,6 +43,7 @@ export const theme = {
   github: '#16171A',
 
   // breakpoints
+  xsmall: '350px', // small phones
   small: '576px', // landscape phones
   tablet: '1366px', // tablets (includes 12.9 iPad pro)
   large: '992px', // desktops, laptops

@@ -8,7 +8,11 @@ interface LogoProps {
 }
 
 const Logo = ({ variant = 'full' }: LogoProps) => {
-  return <Link to='/'>{variant === 'alone' ? <CwdLogoAlone /> : <CwdLogo />}</Link>
+  return (
+    <Link to='/'>
+      <div>{variant === 'alone' ? <CwdLogoAlone /> : <CwdLogo />}</div>
+    </Link>
+  )
 }
 
 export default Logo
