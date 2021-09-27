@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001
 // force https
 app.use((req, res, next) => {
   if (!req.secure && process.env.NODE_ENV === 'production') {
-    return res.redirect(`https://${req.get('host')}${req.url}`)
+    res.redirect(`https://${req.get('host')}${req.url}`)
   }
   next()
 })
