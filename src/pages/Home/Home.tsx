@@ -12,7 +12,7 @@ import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
 import MutedColor from 'src/components/MutedColor'
 import Showcase from 'src/components/Showcase'
-import Space from 'src/components/Space'
+import Spacer from 'src/components/Spacer'
 import Text from 'src/components/Text'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
@@ -28,20 +28,19 @@ const Home = () => {
             <Text variant='h3'>
               <MutedColor>Introducing</MutedColor>
             </Text>
-            <Space padding='.1rem 0' />
             <LogoText variant='h1'>
               Cornell <BrandColor>WebDev</BrandColor>
             </LogoText>
-            <Space padding='.8rem 0' />
-            <CenteredText variant='p'>Let's redefine what it means</CenteredText>
-            <CenteredText variant='p'>to be a project team, together.</CenteredText>
-            <Space padding='.8rem 0' />
+            <CenteredTextContainer>
+              <CenteredText variant='p'>Let's redefine what it means</CenteredText>
+              <CenteredText variant='p'>to be a project team, together.</CenteredText>
+            </CenteredTextContainer>
             {isDesktop && (
               <Link to='/apply'>
                 <ContainedButton>Apply</ContainedButton>
               </Link>
             )}
-            <Space padding='2rem 0' />
+            <Spacer y={4} />
             {!isDesktop && (
               <FlexRow justifyCenter>
                 <Illust0 />
@@ -141,10 +140,15 @@ const CenteredText = styled(Text)`
 
 const LogoText = styled(Text)`
   white-space: nowrap;
+  margin-top: 0.1rem;
 
   @media (max-width: ${(props) => props.theme.xsmall}) {
     font-size: 2rem;
   }
+`
+
+const CenteredTextContainer = styled.div`
+  padding: 1.5rem 0;
 `
 
 export default Home

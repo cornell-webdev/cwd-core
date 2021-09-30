@@ -1,7 +1,7 @@
 import React from 'react'
 import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
-import Space from 'src/components/Space'
+import Spacer from 'src/components/Spacer'
 import Text from 'src/components/Text'
 import styled from 'styled-components'
 import { ReactComponent as IllustTimeline } from 'src/assets/illust-timeline.svg'
@@ -36,27 +36,27 @@ const Timeline = () => {
       </InnerContainer>
       <InnerContainer>
         <FadeOnView>
-          <Space padding='15px 0' />
+          <Spacer y='30px' />
           <FlexRow>
             <DateText>09/27</DateText>
             <EventText>Applications open</EventText>
           </FlexRow>
-          <Space padding='44px 0' />
+          <Spacer y='88px' />
           <FlexRow>
             <DateText>10/06</DateText>
             <EventText>Applications close</EventText>
           </FlexRow>
-          <Space padding='17px 0' />
+          <Spacer y='32px' />
           <FlexRow>
             <DateText>10/08</DateText>
             <EventText>Interviews begin</EventText>
           </FlexRow>
-          <Space padding='45px 0' />
+          <Spacer y='88px' />
           <FlexRow>
             <DateText>10/14</DateText>
             <EventText>Interviews end</EventText>
           </FlexRow>
-          <Space padding='16px 0' />
+          <Spacer y='30px' />
           <FlexRow>
             <DateText>10/16</DateText>
             <EventText>Decisions released</EventText>

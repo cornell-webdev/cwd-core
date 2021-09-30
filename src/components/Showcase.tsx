@@ -5,7 +5,7 @@ import ContainedButton from 'src/components/ContainedButton'
 import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
 import MutedColor from 'src/components/MutedColor'
-import Space from 'src/components/Space'
+import Spacer from 'src/components/Spacer'
 import Text from 'src/components/Text'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
@@ -43,19 +43,18 @@ const Showcase = ({
               <MutedColor>{overline}</MutedColor>
             </Text>
           )}
-          <Space padding='.1rem 0' />
           <Text variant='h1'>
             <BrandColor>{name}</BrandColor>
           </Text>
-          <Space padding='.7rem 0' />
+          <Spacer y={3} />
           <LeftContainer>
             <Text>{p1}</Text>
           </LeftContainer>
-          <Space padding='.4rem 0' />
+          <Spacer y={1.5} />
           <LeftContainer>
             <Text>{p2}</Text>
           </LeftContainer>
-          <Space padding='1rem 0' />
+          <Spacer y={4} />
           {link && !isApply && (
             <a href={link} target='_blank' rel='noopener noreferrer'>
               <ContainedButton>{buttonText}</ContainedButton>
@@ -66,7 +65,7 @@ const Showcase = ({
               <ContainedButton>Apply</ContainedButton>
             </Link>
           )}
-          <Space padding='2rem 0' />
+          <Spacer y={4} />
           {!isDesktop && <FlexRow justifyCenter>{svg}</FlexRow>}
         </FadeOnView>
         <InnerDivider />
