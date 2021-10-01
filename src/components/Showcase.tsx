@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BrandColor from 'src/components/BrandColor'
-import ContainedButton from 'src/components/ContainedButton'
+import Button from 'src/components/glue/Button'
 import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
 import MutedColor from 'src/components/MutedColor'
@@ -57,12 +57,12 @@ const Showcase = ({
           <Spacer y={4} />
           {link && !isApply && (
             <a href={link} target='_blank' rel='noopener noreferrer'>
-              <ContainedButton>{buttonText}</ContainedButton>
+              <Button variant='outlined'>{buttonText}</Button>
             </a>
           )}
           {isApply && (
             <Link to='/apply'>
-              <ContainedButton>Apply</ContainedButton>
+              <Button variant='outlined'>Apply</Button>
             </Link>
           )}
           <Spacer y={4} />

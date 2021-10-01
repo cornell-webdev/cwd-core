@@ -26,7 +26,7 @@ export default function FadeIn(props: PropsWithChildren<Props>) {
       count = 0
     }
 
-    if (count == maxIsVisible) {
+    if (count === maxIsVisible) {
       // We're done updating maxVisible, notify when animation is done
       const timeout = setTimeout(() => {
         if (props.onComplete) props.onComplete()

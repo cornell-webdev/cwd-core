@@ -23,7 +23,7 @@ const StyledText = styled.p<IStyledTextProps>`
   font-size: 1.1rem;
   line-height: 1.3;
 
-  /* variant */
+  /* variants */
   font-size: ${(props) => props.variant === 'h1' && `2.5rem`};
   font-weight: ${(props) => props.variant === 'h1' && `bold`};
 

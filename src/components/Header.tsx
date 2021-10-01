@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import ContainedButton from './ContainedButton'
+import Button from './glue/Button'
 import Logo from './Logo'
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
     <Container>
       <Logo />
       <Link to='apply'>
-        <ContainedButton>Apply</ContainedButton>
+        <Button>Apply</Button>
       </Link>
     </Container>
   )

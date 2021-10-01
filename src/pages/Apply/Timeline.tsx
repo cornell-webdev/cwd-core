@@ -101,14 +101,14 @@ const VertLine = styled.div<IVertLineProps>`
   height: ${(props) => props.height && `${props.height}px`};
 
   /* brand */
-  background: ${(props) => props.brand && props.theme.brand.default};
+  background: ${(props) => props.brand && props.theme.brand[500]};
 `
 
 const Dot = styled.div`
   border-radius: 50%;
   height: 1rem;
   width: 1rem;
-  background: ${(props) => props.theme.brand.default};
+  background: ${(props) => props.theme.brand[500]};
   border: 2px solid white;
 `
 

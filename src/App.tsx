@@ -1,20 +1,19 @@
+import { GlueProvider } from 'cornell-glue-ui'
 import React, { Suspense } from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Route, Router, Switch } from 'react-router-dom'
+import Header from './components/Header'
+import ScrollToTop from './components/ScrollToTop'
+import './fonts/fonts.css'
 import Apply from './pages/Apply/Apply'
 import Home from './pages/Home/Home'
-import './fonts/fonts.css'
 import './styles/app.css'
 import './styles/transitions.css'
-import Header from './components/Header'
-import { ThemeProvider } from 'styled-components'
-import theme from './styles/theme'
 import history from './util/history'
-import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Router history={history}>
-      <ThemeProvider theme={theme}>
+      <GlueProvider>
         <Suspense fallback={<div />}>
           <ScrollToTop />
           <Header />
@@ -23,7 +22,7 @@ function App() {
             <Route path='/apply' component={Apply} />
           </Switch>
         </Suspense>
-      </ThemeProvider>
+      </GlueProvider>
     </Router>
   )
 }
