@@ -80,7 +80,7 @@ const Home = () => {
         p1='Glue is a centralized design system and React component library for Cornell WebDev.'
         p2='Building a comprehensive design system is hard work! But your work on Glue will impact
         all the projects within Cornell WebDev. Talk about lots of responsibility!'
-        link='https://github.com/cornell-webdev/glue-ui'
+        link='https://6156709ecded80003acc50f3-apnyeeyqik.chromatic.com/?path=/docs/button--default'
         svg={<Illust3 />}
       />
       <Showcase
@@ -88,7 +88,7 @@ const Home = () => {
         name='Core'
         p1="Core will be working on this very website. Yep! The one you're looking at right now!"
         p2='This subteam will be responsible for the face of Cornell WebDev. First impressions matter. Remember, we only have 10 seconds!'
-        link='https://6156709ecded80003acc50f3-apnyeeyqik.chromatic.com/?path=/docs/button--default'
+        link='https://github.com/cornell-webdev/cwd-core'
         svg={<IllustCore />}
       />
       <Showcase
