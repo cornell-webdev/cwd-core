@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ReactComponent as CwdLogoAlone } from 'src/assets/cwd-logo-alone.svg'
 import { ReactComponent as CwdLogo } from 'src/assets/cwd-logo.svg'
+import styled from 'styled-components'
 
-interface LogoProps {
-  variant?: 'full' | 'alone'
-}
-
-const Logo = ({ variant = 'full' }: LogoProps) => {
+const Logo = () => {
   return (
     <Link to='/'>
-      <div>{variant === 'alone' ? <CwdLogoAlone /> : <CwdLogo />}</div>
+      <StyledLogo />
     </Link>
   )
 }
+
+const StyledLogo = styled(CwdLogo)`
+  width: 100px;
+  height: 30px;
+`
 
 export default Logo

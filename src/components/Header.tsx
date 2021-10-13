@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
 import ContainedButton from './ContainedButton'
 import Logo from './Logo'
 
 const Header = () => {
-  const isDesktop = useIsDesktop()
-
   return (
     <Container>
-      <Logo variant={isDesktop ? 'full' : 'alone'} />
+      <Logo />
       <Link to='apply'>
         <ContainedButton>Apply</ContainedButton>
       </Link>

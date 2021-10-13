@@ -1,6 +1,6 @@
 # Core
 
-This is the Cornell WebDev website. 
+This is the webdev website.  
 
 ## Available Scripts
 

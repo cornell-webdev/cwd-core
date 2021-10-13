@@ -40,7 +40,7 @@ const Apply = () => {
         overline='Figma'
         name='Designer'
         p1='As a designer, you will be designing low and high fidelity designs in Figma.'
-        p2='You could also get a chance to design the Cornell WebDev brand. (Maybe you could design our logo!)'
+        p2='You could also get a chance to design the webdev brand. (Maybe you could design our logo!)'
         svg={<IllustDesign />}
         link='https://forms.gle/HttsvcvhKbsF9Jnv8'
         buttonText='Apply'

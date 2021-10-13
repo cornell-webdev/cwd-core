@@ -1,13 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
 import { ReactComponent as Illust2 } from 'src/assets/illust-2.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
-import { ReactComponent as IllustApply } from 'src/assets/illust-apply.svg'
 import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
 import BrandColor from 'src/components/BrandColor'
-import ContainedButton from 'src/components/ContainedButton'
 import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
 import MutedColor from 'src/components/MutedColor'
@@ -29,17 +26,14 @@ const Home = () => {
               <MutedColor>Introducing</MutedColor>
             </Text>
             <LogoText variant='h1'>
-              Cornell <BrandColor>WebDev</BrandColor>
+              <BrandColor>webdev</BrandColor>
             </LogoText>
             <CenteredTextContainer>
-              <CenteredText variant='p'>Let's redefine what it means</CenteredText>
-              <CenteredText variant='p'>to be a project team, together.</CenteredText>
+              <CenteredText variant='p'>
+                webdev is a student organization at Cornell that aims to build performant web
+                applications for the Cornell community.
+              </CenteredText>
             </CenteredTextContainer>
-            {isDesktop && (
-              <Link to='/apply'>
-                <ContainedButton>Apply</ContainedButton>
-              </Link>
-            )}
             <Spacer y={4} />
             {!isDesktop && (
               <FlexRow justifyCenter>
@@ -77,9 +71,9 @@ const Home = () => {
       <Showcase
         overline='Subteam 03'
         name='Glue'
-        p1='Glue is a centralized design system and React component library for Cornell WebDev.'
+        p1='Glue is a centralized design system and React component library for webdev.'
         p2='Building a comprehensive design system is hard work! But your work on Glue will impact
-        all the projects within Cornell WebDev. Talk about lots of responsibility!'
+        all the projects within webdev. Talk about lots of responsibility!'
         link='https://6156709ecded80003acc50f3-apnyeeyqik.chromatic.com/?path=/docs/button--default'
         svg={<Illust3 />}
       />
@@ -87,11 +81,11 @@ const Home = () => {
         overline='Subteam 04'
         name='Core'
         p1="Core will be working on this very website. Yep! The one you're looking at right now!"
-        p2='This subteam will be responsible for the face of Cornell WebDev. First impressions matter. Remember, we only have 10 seconds!'
+        p2='This subteam will be responsible for the face of webdev. First impressions matter. Remember, we only have 10 seconds!'
         link='https://github.com/cornell-webdev/cwd-core'
         svg={<IllustCore />}
       />
-      <Showcase
+      {/* <Showcase
         overline="It's open!"
         name='Apply now'
         p1='Applications are open! Head on over and submit your application.'
@@ -100,7 +94,7 @@ const Home = () => {
         link='/apply'
         svg={<IllustApply />}
         isApply
-      />
+      /> */}
     </Container>
   )
 }
@@ -150,6 +144,10 @@ const LogoText = styled(Text)`
 
 const CenteredTextContainer = styled.div`
   padding: 1.5rem 0;
+
+  @media (min-width: ${(props) => props.theme.large}) {
+    max-width: 400px;
+  }
 `
 
 export default Home
