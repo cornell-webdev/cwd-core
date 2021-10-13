@@ -1,31 +1,40 @@
 import React from 'react'
-import styled from 'styled-components'
-import Showcase from 'src/components/Showcase'
-import Timeline from './Timeline'
 import { ReactComponent as IllustApplyMain } from 'src/assets/illust-apply-main.svg'
-import { ReactComponent as IllustFrontend } from 'src/assets/illust-frontend.svg'
 import { ReactComponent as IllustBackend } from 'src/assets/illust-backend.svg'
 import { ReactComponent as IllustDesign } from 'src/assets/illust-design.svg'
+import { ReactComponent as IllustFrontend } from 'src/assets/illust-frontend.svg'
+import Showcase from 'src/components/Showcase'
+import styled from 'styled-components'
 
 const Apply = () => {
   return (
     <Container>
-      <Showcase
+      {/* <Showcase
         overline='Welcome'
         name='Come join us!'
         p1="We'll give you a brief overview of our application process."
         p2='Afterwards, feel free to apply to the position that fits you best. Good luck!'
         svg={<IllustApplyMain />}
+      /> */}
+      <Showcase
+        overline='Fall 2021'
+        name='Applications are closed'
+        p1="We're no longer receiving applications for this semester."
+        p2='If you sign up for our application email list, we notify you via email once applications open.'
+        svg={<IllustApplyMain />}
+        link='https://forms.gle/9bxLcK554j8jgi9f6'
+        buttonText='Notify me'
       />
-      <Timeline />
+      {/* https://forms.gle/9bxLcK554j8jgi9f6 */}
+      {/* <Timeline /> */}
       <Showcase
         overline='React'
         name='Frontend Developer'
         p1='As a frontend developer, you will be developing highly performant React applications!'
         p2='Some of the things we use are Typescript, styled-components, and react-query.'
         svg={<IllustFrontend />}
-        link='https://forms.gle/CDH48gVp6csGyQJA9'
-        buttonText='Apply'
+        // link='https://forms.gle/CDH48gVp6csGyQJA9'
+        // buttonText='Apply'
       />
       <Showcase
         overline='Node.js | MongoDB'
@@ -33,17 +42,17 @@ const Apply = () => {
         p1='As a backend developer, you will be developing APIs and designing databases.'
         p2='Some of the things we use are Node.js, Express, and MongoDB.'
         svg={<IllustBackend />}
-        link='https://forms.gle/dAXuDMSyuP4mH1MX9'
-        buttonText='Apply'
+        // link='https://forms.gle/dAXuDMSyuP4mH1MX9'
+        // buttonText='Apply'
       />
       <Showcase
         overline='Figma'
         name='Designer'
         p1='As a designer, you will be designing low and high fidelity designs in Figma.'
-        p2='You could also get a chance to design the webdev brand. (Maybe you could design our logo!)'
+        p2='You could also get a chance to design the webdev brand.'
         svg={<IllustDesign />}
-        link='https://forms.gle/HttsvcvhKbsF9Jnv8'
-        buttonText='Apply'
+        // link='https://forms.gle/HttsvcvhKbsF9Jnv8'
+        // buttonText='Apply'
       />
     </Container>
   )
