@@ -1,16 +1,15 @@
+import { Text } from 'cornell-glue-ui'
 import React from 'react'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
 import { ReactComponent as Illust2 } from 'src/assets/illust-2.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
 import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
-import BrandColor from 'src/components/BrandColor'
 import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
-import MutedColor from 'src/components/MutedColor'
+import Overline from 'src/components/Overline'
 import Showcase from 'src/components/Showcase'
 import Spacer from 'src/components/Spacer'
-import Text from 'src/components/Text'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
 
@@ -22,14 +21,10 @@ const Home = () => {
       <Section>
         <FlexRow justifySpaceAround alignCenter>
           <FadeOnView>
-            <Text variant='h3'>
-              <MutedColor>Introducing</MutedColor>
-            </Text>
-            <LogoText variant='h1'>
-              <BrandColor>webdev</BrandColor>
-            </LogoText>
+            <Overline variant='h4'>Introducing</Overline>
+            <LogoText variant='h1'>webdev</LogoText>
             <CenteredTextContainer>
-              <CenteredText variant='p'>
+              <CenteredText variant='h6'>
                 webdev is a student organization at Cornell that aims to build performant web
                 applications for the Cornell community.
               </CenteredText>
@@ -54,34 +49,40 @@ const Home = () => {
       <Showcase
         overline='Subteam 01'
         name='Cornlet'
-        p1='Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.'
-        p2="We're looking to expand into the housing market in general. New features will include year-lease listings, landlord reviews, and more!"
+        paragraphs={[
+          'Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.',
+          "We're looking to expand into the housing market in general. New features will include year-lease listings, landlord reviews, and more!",
+        ]}
         link='https://www.cornlet.com'
         svg={<Illust1 />}
       />
       <Showcase
         overline='Subteam 02'
         name='Coursable'
-        p1="Coursable is a course planning platform for Cornell students. It's still a work in progress!"
-        p2="It's going to be an open source course planning platform, which means you will be able
-        to duplicate existing course plans instead of creating your own from scratch!"
+        paragraphs={[
+          "Coursable is a course planning platform for Cornell students. It's still a work in progress!",
+          "It's going to be an open source course planning platform, which means you will be able to duplicate existing course plans instead of creating your own from scratch!",
+        ]}
         link='https://coursable-cornell.herokuapp.com/'
         svg={<Illust2 />}
       />
       <Showcase
         overline='Subteam 03'
         name='Glue'
-        p1='Glue is a centralized design system and React component library for webdev.'
-        p2='Building a comprehensive design system is hard work! But your work on Glue will impact
-        all the projects within webdev. Talk about lots of responsibility!'
+        paragraphs={[
+          'Glue is a centralized design system and React component library for webdev.',
+          'Building a comprehensive design system is hard work! But your work on Glue will impact all the projects within webdev. Talk about lots of responsibility!',
+        ]}
         link='https://6156709ecded80003acc50f3-apnyeeyqik.chromatic.com/?path=/docs/button--default'
         svg={<Illust3 />}
       />
       <Showcase
         overline='Subteam 04'
         name='Core'
-        p1="Core will be working on this very website. Yep! The one you're looking at right now!"
-        p2='This subteam will be responsible for the face of webdev. First impressions matter. Remember, we only have 10 seconds!'
+        paragraphs={[
+          "Core will be working on this very website. Yep! The one you're looking at right now!",
+          'This subteam will be responsible for the face of webdev. First impressions matter. Remember, we only have 10 seconds!',
+        ]}
         link='https://github.com/cornell-webdev/cwd-core'
         svg={<IllustCore />}
       />
@@ -127,6 +128,8 @@ export const InnerDivider = styled.div`
 
 const CenteredText = styled(Text)`
   text-align: center;
+  font-weight: 400;
+  color: ${(props) => props.theme.text.light};
 
   @media (min-width: ${(props) => props.theme.large}) {
     text-align: left;
@@ -136,6 +139,8 @@ const CenteredText = styled(Text)`
 const LogoText = styled(Text)`
   white-space: nowrap;
   margin-top: 0.1rem;
+  color: ${(props) => props.theme.brand[500]};
+  font-weight: 500;
 
   @media (max-width: ${(props) => props.theme.xsmall}) {
     font-size: 2rem;

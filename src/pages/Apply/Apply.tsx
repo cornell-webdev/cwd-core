@@ -19,8 +19,10 @@ const Apply = () => {
       <Showcase
         overline='Fall 2021'
         name='Applications are closed'
-        p1="We're no longer receiving applications for this semester."
-        p2='If you sign up for our application email list, we notify you via email once applications open.'
+        paragraphs={[
+          "We're no longer receiving applications for this semester.",
+          'If you sign up for our application email list, we notify you via email once applications open.',
+        ]}
         svg={<IllustApplyMain />}
         link='https://forms.gle/9bxLcK554j8jgi9f6'
         buttonText='Notify me'
@@ -30,8 +32,10 @@ const Apply = () => {
       <Showcase
         overline='React'
         name='Frontend Developer'
-        p1='As a frontend developer, you will be developing highly performant React applications!'
-        p2='Some of the things we use are Typescript, styled-components, and react-query.'
+        paragraphs={[
+          'As a frontend developer, you will be developing highly performant React applications!',
+          'Some of the things we use are Typescript, styled-components, and react-query.',
+        ]}
         svg={<IllustFrontend />}
         // link='https://forms.gle/CDH48gVp6csGyQJA9'
         // buttonText='Apply'
@@ -39,8 +43,10 @@ const Apply = () => {
       <Showcase
         overline='Node.js | MongoDB'
         name='Backend Developer'
-        p1='As a backend developer, you will be developing APIs and designing databases.'
-        p2='Some of the things we use are Node.js, Express, and MongoDB.'
+        paragraphs={[
+          'As a backend developer, you will be developing APIs and designing databases.',
+          'Some of the things we use are Node.js, Express, and MongoDB.',
+        ]}
         svg={<IllustBackend />}
         // link='https://forms.gle/dAXuDMSyuP4mH1MX9'
         // buttonText='Apply'
@@ -48,8 +54,10 @@ const Apply = () => {
       <Showcase
         overline='Figma'
         name='Designer'
-        p1='As a designer, you will be designing low and high fidelity designs in Figma.'
-        p2='You could also get a chance to design the webdev brand.'
+        paragraphs={[
+          'As a designer, you will be designing low and high fidelity designs in Figma.',
+          'You could also get a chance to design the webdev brand.',
+        ]}
         svg={<IllustDesign />}
         // link='https://forms.gle/HttsvcvhKbsF9Jnv8'
         // buttonText='Apply'
