@@ -1,11 +1,10 @@
+import { FadeOnView, Text } from 'cornell-glue-ui'
 import React from 'react'
-import FadeOnView from 'src/components/FadeOnView'
+import { ReactComponent as IllustTimeline } from 'src/assets/illust-timeline.svg'
 import { FlexRow } from 'src/components/FlexContainer'
 import Spacer from 'src/components/Spacer'
-import { Text } from 'cornell-glue-ui'
-import styled from 'styled-components'
-import { ReactComponent as IllustTimeline } from 'src/assets/illust-timeline.svg'
 import useIsDesktop from 'src/hooks/useIsDesktop'
+import styled from 'styled-components'
 
 const Timeline = () => {
   const isDesktop = useIsDesktop()

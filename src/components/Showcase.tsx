@@ -1,7 +1,6 @@
-import { Button, Text } from 'cornell-glue-ui'
+import { Button, Text, FadeOnView } from 'cornell-glue-ui'
 import React from 'react'
 import BrandColor from 'src/components/BrandColor'
-import FadeOnView from 'src/components/FadeOnView'
 import { FlexRow } from 'src/components/FlexContainer'
 import Spacer from 'src/components/Spacer'
 import useIsDesktop from 'src/hooks/useIsDesktop'
