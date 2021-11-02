@@ -1,8 +1,7 @@
-import { FadeOnView, Text } from 'cornell-glue-ui'
+import { FadeOnView, Text, Spacer } from 'cornell-glue-ui'
 import React from 'react'
 import { ReactComponent as IllustTimeline } from 'src/assets/illust-timeline.svg'
 import { FlexRow } from 'src/components/FlexContainer'
-import Spacer from 'src/components/Spacer'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
 

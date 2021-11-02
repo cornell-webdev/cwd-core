@@ -1,4 +1,4 @@
-import { FadeOnView, Text } from 'cornell-glue-ui'
+import { FadeOnView, Text, Spacer } from 'cornell-glue-ui'
 import React from 'react'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
@@ -8,7 +8,6 @@ import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
 import { FlexRow } from 'src/components/FlexContainer'
 import Overline from 'src/components/Overline'
 import Showcase from 'src/components/Showcase'
-import Spacer from 'src/components/Spacer'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
 
