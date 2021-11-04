@@ -3,7 +3,6 @@ import React, { Suspense } from 'react'
 import { Route, Router, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Logo from './components/Logo'
-import ScrollToTop from './components/ScrollToTop'
 import './fonts/fonts.css'
 import Apply from './pages/Apply/Apply'
 import Home from './pages/Home/Home'
@@ -16,7 +15,6 @@ function App() {
     <Router history={history}>
       <GlueProvider>
         <Suspense fallback={<div />}>
-          <ScrollToTop />
           <Header />
           <Switch>
             <Route exact path='/' component={Home} />

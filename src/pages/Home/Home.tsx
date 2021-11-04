@@ -1,5 +1,5 @@
-import { FadeOnView, Showcase, Spacer, Text } from 'cornell-glue-ui'
 import React from 'react'
+import { FadeOnView, Showcase, Spacer, Text } from 'cornell-glue-ui'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
 import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
@@ -92,16 +92,7 @@ const Home = () => {
         link='https://coursable-cornell.herokuapp.com/'
         svg={<Illust2 />}
       /> */}
-      {/* <Showcase
-        overline="It's open!"
-        name='Apply now'
-        p1='Applications are open! Head on over and submit your application.'
-        p2='We look forward to
-        seeing you!'
-        link='/apply'
-        svg={<IllustApply />}
-        isApply
-      /> */}
+      {/* <Showcase overline="It's open!" name='Apply now' link='/apply' svg={<IllustCore />} /> */}
     </Container>
   )
 }
