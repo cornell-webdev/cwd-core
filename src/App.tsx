@@ -35,11 +35,11 @@ function App() {
                 routes: [
                   {
                     label: 'Glue',
-                    url: '/products/glue',
+                    url: '/',
                   },
                   {
                     label: 'RSVP',
-                    url: '/products/rsvp',
+                    url: '/',
                   },
                 ],
               },
