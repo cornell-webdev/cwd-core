@@ -1,13 +1,11 @@
-import { FadeOnView, Text, Spacer } from 'cornell-glue-ui'
+import { FadeOnView, Showcase, Spacer, Text } from 'cornell-glue-ui'
 import React from 'react'
 import { ReactComponent as Illust0 } from 'src/assets/illust-0.svg'
-import { ReactComponent as Illust1 } from 'src/assets/illust-1.svg'
-import { ReactComponent as Illust2 } from 'src/assets/illust-2.svg'
 import { ReactComponent as Illust3 } from 'src/assets/illust-3.svg'
 import { ReactComponent as IllustCore } from 'src/assets/illust-core.svg'
+import { ReactComponent as IllustRSVP } from 'src/assets/illust-rsvp.svg'
 import { FlexRow } from 'src/components/FlexContainer'
 import Overline from 'src/components/Overline'
-import Showcase from 'src/components/Showcase'
 import useIsDesktop from 'src/hooks/useIsDesktop'
 import styled from 'styled-components'
 
@@ -45,37 +43,27 @@ const Home = () => {
         </FlexRow>
       </Section>
       <Showcase
-        overline='Subteam 01'
-        name='Cornlet'
+        overline='Product 01'
+        name='RSVP'
         paragraphs={[
-          'Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.',
-          "We're looking to expand into the housing market in general. New features will include year-lease listings, landlord reviews, and more!",
+          'RSVP gathers and displays all the events happening in the Cornell community.',
+          "Discover exciting events from a comprehensive database of events. If you're hosting an event, advertise your events on RSVP to gather greater interest from the community!",
         ]}
-        link='https://www.cornlet.com'
-        svg={<Illust1 />}
+        link='https://cornellrsvp.com'
+        svg={<IllustRSVP />}
       />
       <Showcase
-        overline='Subteam 02'
-        name='Coursable'
-        paragraphs={[
-          "Coursable is a course planning platform for Cornell students. It's still a work in progress!",
-          "It's going to be an open source course planning platform, which means you will be able to duplicate existing course plans instead of creating your own from scratch!",
-        ]}
-        link='https://coursable-cornell.herokuapp.com/'
-        svg={<Illust2 />}
-      />
-      <Showcase
-        overline='Subteam 03'
+        overline='Product 02'
         name='Glue'
         paragraphs={[
           'Glue is a centralized design system and React component library for webdev.',
           'Building a comprehensive design system is hard work! But your work on Glue will impact all the projects within webdev. Talk about lots of responsibility!',
         ]}
-        link='https://6156709ecded80003acc50f3-apnyeeyqik.chromatic.com/?path=/docs/button--default'
+        link='https://master--6156709ecded80003acc50f3.chromatic.com'
         svg={<Illust3 />}
       />
       <Showcase
-        overline='Subteam 04'
+        overline='Product 03'
         name='Core'
         paragraphs={[
           "Core will be working on this very website. Yep! The one you're looking at right now!",
@@ -84,6 +72,26 @@ const Home = () => {
         link='https://github.com/cornell-webdev/cwd-core'
         svg={<IllustCore />}
       />
+      {/* <Showcase
+        overline='Subteam 01'
+        name='Cornlet'
+        paragraphs={[
+          'Cornlet is a sublet marketplace for the Cornell community. Think Airbnb, but for sublets.',
+          "We're looking to expand into the housing market in general. New features will include year-lease listings, landlord reviews, and more!",
+        ]}
+        link='https://www.cornlet.com'
+        svg={<Illust1 />}
+      /> */}
+      {/* <Showcase
+        overline='Subteam 02'
+        name='Coursable'
+        paragraphs={[
+          "Coursable is a course planning platform for Cornell students. It's still a work in progress!",
+          "It's going to be an open source course planning platform, which means you will be able to duplicate existing course plans instead of creating your own from scratch!",
+        ]}
+        link='https://coursable-cornell.herokuapp.com/'
+        svg={<Illust2 />}
+      /> */}
       {/* <Showcase
         overline="It's open!"
         name='Apply now'

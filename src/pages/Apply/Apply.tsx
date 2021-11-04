@@ -3,7 +3,7 @@ import { ReactComponent as IllustApplyMain } from 'src/assets/illust-apply-main.
 import { ReactComponent as IllustBackend } from 'src/assets/illust-backend.svg'
 import { ReactComponent as IllustDesign } from 'src/assets/illust-design.svg'
 import { ReactComponent as IllustFrontend } from 'src/assets/illust-frontend.svg'
-import Showcase from 'src/components/Showcase'
+import { Showcase } from 'cornell-glue-ui'
 import styled from 'styled-components'
 
 const Apply = () => {
