@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import theme from 'src/styles/theme'
+import { theme } from 'cornell-glue-ui'
 import useWindowSize from './useWindowSize'
 
 const useIsDesktop = () => {
