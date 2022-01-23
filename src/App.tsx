@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Logo from './components/Logo'
 import Apply from './pages/Apply/Apply'
 import Home from './pages/Home/Home'
+import Products from './pages/Products/Products'
 import './styles/transitions.css'
 import history from './util/history'
 
@@ -16,6 +17,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route path='/products' component={Products} />
             <Route path='/apply' component={Apply} />
           </Switch>
           <Footer
@@ -35,11 +37,11 @@ function App() {
                 routes: [
                   {
                     label: 'Glue',
-                    url: '/',
+                    url: '/products',
                   },
                   {
                     label: 'RSVP',
-                    url: '/',
+                    url: '/products',
                   },
                 ],
               },

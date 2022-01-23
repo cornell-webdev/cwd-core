@@ -11,11 +11,14 @@ const Timeline = () => {
   return (
     <Container>
       {isDesktop && (
-        <InnerContainer>
-          <FadeOnView>
-            <StyledIllustTimeline />
-          </FadeOnView>
-        </InnerContainer>
+        <>
+          <InnerContainer>
+            <FadeOnView>
+              <StyledIllustTimeline />
+            </FadeOnView>
+          </InnerContainer>
+          <Spacer x={3} />
+        </>
       )}
       <InnerContainer>
         <LineContainer>
@@ -34,29 +37,29 @@ const Timeline = () => {
       </InnerContainer>
       <InnerContainer>
         <FadeOnView>
-          <Spacer y='30px' />
+          <Spacer y='24px' />
           <FlexRow>
-            <DateText>09/27</DateText>
+            <DateText>01/24</DateText>
             <EventText>Applications open</EventText>
           </FlexRow>
           <Spacer y='88px' />
           <FlexRow>
-            <DateText>10/06</DateText>
+            <DateText>02/06</DateText>
             <EventText>Applications close</EventText>
           </FlexRow>
-          <Spacer y='32px' />
+          <Spacer y='28px' />
           <FlexRow>
-            <DateText>10/08</DateText>
+            <DateText>02/07</DateText>
             <EventText>Interviews begin</EventText>
           </FlexRow>
           <Spacer y='88px' />
           <FlexRow>
-            <DateText>10/14</DateText>
+            <DateText>02/12</DateText>
             <EventText>Interviews end</EventText>
           </FlexRow>
-          <Spacer y='30px' />
+          <Spacer y='28px' />
           <FlexRow>
-            <DateText>10/16</DateText>
+            <DateText>02/16</DateText>
             <EventText>Decisions released</EventText>
           </FlexRow>
         </FadeOnView>
