@@ -5,18 +5,21 @@ import { ReactComponent as IllustDesign } from 'src/assets/illust-design.svg'
 import { ReactComponent as IllustFrontend } from 'src/assets/illust-frontend.svg'
 import { Showcase } from 'cornell-glue-ui'
 import styled from 'styled-components'
+import Timeline from './Timeline'
 
 const Apply = () => {
   return (
     <Container>
-      {/* <Showcase
+      <Showcase
         overline='Welcome'
         name='Come join us!'
-        p1="We'll give you a brief overview of our application process."
-        p2='Afterwards, feel free to apply to the position that fits you best. Good luck!'
+        paragraphs={[
+          "We'll give you a brief overview of our application process.",
+          'Afterwards, feel free to apply to the position that fits you best. Good luck!',
+        ]}
         svg={<IllustApplyMain />}
-      /> */}
-      <Showcase
+      />
+      {/* <Showcase
         overline='Fall 2021'
         name='Applications are closed'
         paragraphs={[
@@ -26,21 +29,22 @@ const Apply = () => {
         svg={<IllustApplyMain />}
         link='https://forms.gle/9bxLcK554j8jgi9f6'
         buttonText='Notify me'
-      />
-      {/* https://forms.gle/9bxLcK554j8jgi9f6 */}
-      {/* <Timeline /> */}
+      /> */}
+      <Timeline />
+
       <Showcase
-        overline='React'
-        name='Frontend Developer'
+        // overline='Typescript | React | Node.js | MongoDB'
+        overline='Typescript • React • Node.js • MongoDB'
+        name='Developer'
         paragraphs={[
-          'As a frontend developer, you will be developing highly performant React applications!',
-          'Some of the things we use are Typescript, styled-components, and react-query.',
+          'As a developer, you will be responsible for developing performant React applications!',
+          'We use Typescript, styled-components, react-query, Express, and MongoDB to develop our web applications.',
         ]}
         svg={<IllustFrontend />}
-        // link='https://forms.gle/CDH48gVp6csGyQJA9'
-        // buttonText='Apply'
+        link='https://forms.gle/JNc2oo5BR5RWjWVo6'
+        buttonText='Apply'
       />
-      <Showcase
+      {/* <Showcase
         overline='Node.js | MongoDB'
         name='Backend Developer'
         paragraphs={[
@@ -50,17 +54,27 @@ const Apply = () => {
         svg={<IllustBackend />}
         // link='https://forms.gle/dAXuDMSyuP4mH1MX9'
         // buttonText='Apply'
-      />
+      /> */}
       <Showcase
         overline='Figma'
         name='Designer'
         paragraphs={[
-          'As a designer, you will be designing low and high fidelity designs in Figma.',
-          'You could also get a chance to design the webdev brand.',
+          'As a designer at Cornell webdev, you will be responsible for creating UI / UX designs on Figma.',
+          'Additionally, you could be given the opportunity to design the Cornell webdev brand!',
         ]}
         svg={<IllustDesign />}
-        // link='https://forms.gle/HttsvcvhKbsF9Jnv8'
-        // buttonText='Apply'
+        link='https://forms.gle/2brwTHGqsXdsm3z76'
+        buttonText='Apply'
+      />
+      <Showcase
+        overline='Marketing • Growth'
+        name='Business'
+        paragraphs={[
+          'As Cornell webdev, you will be responsible for exploring strategies for growth, marketing through various channels, acquiring funding, establishing connections with industry partners, and so on!',
+        ]}
+        svg={<IllustBackend />}
+        link='https://forms.gle/gE7H65csEo9Xmn4J8'
+        buttonText='Apply'
       />
     </Container>
   )
