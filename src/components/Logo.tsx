@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ReactComponent as CwdLogo } from 'src/assets/cwd-logo.svg'
+import { ReactComponent as CwdLogo } from 'src/assets/webdev-logo.svg'
 import { ReactComponent as CwdLogoDark } from 'src/assets/cwd-logo-dark.svg'
 import styled from 'styled-components'
 
@@ -16,6 +16,7 @@ const Logo = ({ variant = 'default' }: ILogoProps) => {
       </Link>
     )
   }
+
   return (
     <Link to='/'>
       <StyledLogo />
@@ -24,8 +25,15 @@ const Logo = ({ variant = 'default' }: ILogoProps) => {
 }
 
 const StyledLogo = styled(CwdLogo)`
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 25px;
+  margin-top: 2px;
+
+  @media (min-width: ${(props) => props.theme.small}) {
+    margin-top: 0;
+    width: 150px;
+    height: 30px;
+  }
 `
 
 const StyledLogoDark = styled(CwdLogoDark)`

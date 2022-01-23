@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Container>
       <Showcase
-        overline='Introducing'
+        overline='Passion for'
         name='Web development at Cornell'
         paragraphs={[
           'webdev is a student team at Cornell that aims to build performant web applications for the Cornell community.',
