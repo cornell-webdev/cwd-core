@@ -37,7 +37,7 @@ const Container = styled.div`
 
   @media (min-width: ${(props) => props.theme.small}) {
     & > div {
-      max-width: 1050px;
+      width: 72vw;
     }
   }
 `
