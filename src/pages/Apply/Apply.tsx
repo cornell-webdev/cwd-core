@@ -10,7 +10,7 @@ import Timeline from './Timeline'
 const Apply = () => {
   return (
     <Container>
-      <Showcase
+      {/* <Showcase
         overline='Welcome'
         name='Come join us!'
         paragraphs={[
@@ -18,19 +18,20 @@ const Apply = () => {
           'Afterwards, feel free to apply to the position that fits you best. Good luck!',
         ]}
         svg={<IllustApplyMain />}
-      />
-      {/* <Showcase
-        overline='Fall 2021'
+      /> */}
+      <Showcase
+        overline='Spring 2022'
         name='Applications are closed'
         paragraphs={[
           "We're no longer receiving applications for this semester.",
           'If you sign up for our application email list, we notify you via email once applications open.',
         ]}
         svg={<IllustApplyMain />}
-        link='https://forms.gle/9bxLcK554j8jgi9f6'
+        link='https://forms.gle/cW3u7za4v4Y7rGmS8'
         buttonText='Notify me'
-      /> */}
-      <Timeline />
+      />
+
+      {/* <Timeline /> */}
 
       <Showcase
         // overline='Typescript | React | Node.js | MongoDB'

@@ -15,7 +15,7 @@ const Home = () => {
         ]}
         svg={<Illust0 />}
       />
-      <Showcase
+      {/* <Showcase
         overline="It's open!"
         name='Apply now'
         link='/apply'
@@ -26,7 +26,7 @@ const Home = () => {
         ]}
         isOpenNewTab={false}
         svg={<IllustCore />}
-      />
+      /> */}
     </Container>
   )
 }
